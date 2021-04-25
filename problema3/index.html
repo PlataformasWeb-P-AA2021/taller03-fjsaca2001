@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title>Problema 3</title>
+</head>
+
+<body>
+    <h1>Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more</h1>
+    <p id="mensaje"></p>
+</body>
+<script>
+    $(document).ready(function(){
+        var direccion = "https://pkgstore.datahub.io/core/country-codes/country-codes_json/data/616b1fb83cbfd4eb6d9e7d52924bb00a/country-codes_json.json";
+        $.ajax({
+            dataType: 'json',
+            url: direccion
+        }).then(function(data){
+            for(var i = 0; i < data.length ; i++){
+                $('#mensaje').append("<hr><div><p><b>CLDR display name: </b>"+data[i]['CLDR display name']+"</p></div>"+
+                                     "<div><p><b>Capital: </b>"+data[i]['Capital']+"</p></div>"+
+                                     "<div><p><b>FIPS: </b>"+data[i]['FIPS']+"</p></div>"+
+                                     "<div><p><b>FIFA: </b>"+data[i]['FIFA']+"</p></div>"+
+                                     "<div><p><b>Continent: </b>"+data[i]['Continent']+"</p></div>"+
+                                     "<div><p><b>Languages: </b>"+data[i]['Languages']+"</p></div>"+
+                                     "<div><p><b>Geoname ID	: </b>"+data[i]['Geoname ID']+"</p></div>"+
+                                     "<div><p><b>DS: </b>"+data[i]['DS']+"</p></div>");
+                
+            }
+        })
+});
+</script>
+</html>

@@ -1,0 +1,32 @@
+.uno {
+    border: 4px solid;
+    margin: 4em 5em 1em 4em;
+}
+
+.uno1 {
+    border: 10px solid #9A98FB;
+}
+
+.uno2 {
+    border: 3px solid #F1EE3B;
+}
+
+.mensaje {
+    padding-left: 1em;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.dos {
+    margin: 1em 5em 1em 4em;
+    background-color: #CE8845;
+}
+
+.comentario {
+    color: #FEFEFD;
+    border-bottom: 3px solid #3D8116;
+}
+
+.dos1 {
+    padding: 0 1em;
+}
